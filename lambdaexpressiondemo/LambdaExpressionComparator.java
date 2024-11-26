@@ -5,11 +5,11 @@ import java.util.Collections;
 import java.util.List;
 
 class Student{
-    String ID;
+    String id;
     String name;
 
-    Student(String ID, String name){
-        this.ID = ID;
+    Student(String id, String name){
+        this.id = id;
         this.name = name;
     }
 }
@@ -23,21 +23,21 @@ public class LambdaExpressionComparator {
         list.add(new Student("S102", "Rahul"));
         list.add(new Student("S105", "Amit"));
 
+        //iterating data in descending order of id
         Collections.sort(list,(P1,P2)->{
-            return P2.ID.compareTo(P1.ID);
+            return P2.id.compareTo(P1.id);
         });
 
         //iterating  without using lambda Expression
         for(Student s:list){
-        System.out.println(s.ID+" "+s.name);
+        System.out.println(s.id+" "+s.name);
         }
 
         System.out.println("*******************");
 
         //iterating using lambda Epression
-        
         list.forEach((n)->{
-            System.out.println(n.ID+" "+n.name);
+            System.out.println(n.id+" "+n.name);
         });
 
         
